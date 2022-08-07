@@ -1,0 +1,62 @@
+.main_flex_nowrap{
+	display:flex;
+	display:-webkit-flex;
+	-webkit-flex-flow:row nowrap;
+	flex-flow:row nowrap}
+body{
+	background-color: #070C15;
+	color: #FFFFFF;
+	background-image: url(img/HOME/baner1.png);
+	background-position: left bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Noto Sans', sans-serif;/*Стиль текста*/
+	font-size: 1vw;
+}
+.logo{
+	width: 35vw;
+	margin: auto;
+	text-align: center;
+}
+.imglogo{
+	width: 15vw;
+	height: auto;
+}
+.textlogo{
+	text-align: center;
+	font-size: 4vw;
+
+}
+.AvtAdmin{
+	text-align: center;
+	border-radius: 2vw;
+	background-color: #FFFFFF;
+	color:  #070C15;
+	width: 40vw;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 1vw;
+}
+.avtvod{
+	text-align: right;
+	margin-right:7vw;
+}
+.avtvod input{
+	margin-left: 1vw;
+	margin-top: 1vw;
+	width: 20vw;
+	height: 2vw;
+}
+.btn4{
+	background-color: #6395a7;
+	border-radius: 2vw;
+    color: white;
+    padding: 1vw;
+    border: none;
+    cursor: pointer;
+    width: 20vw;
+   	margin-top: 1vw;
+}

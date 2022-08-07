@@ -1,0 +1,1229 @@
+.main_flex{
+	display:flex;
+	display:-webkit-flex;
+	-webkit-flex-flow:row wrap;
+	flex-flow:row wrap}
+.main_flex_nowrap{
+	display:flex;
+	display:-webkit-flex;
+	-webkit-flex-flow:row nowrap;
+	flex-flow:row nowrap}
+.main_flex_nowrap_reverse{
+	display:flex;
+	display:-webkit-flex;
+	-webkit-flex-flow:row-reverse nowrap;
+	flex-flow:row-reverse nowrap}
+
+
+.flex_jcontent-between{
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-ms-justify-content: space-between;}
+.flex_jcontent-start{
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-justify-content: flex-start;}
+.flex_jcontent-end{
+	justify-content: flex-end;
+	-webkit-justify-content: flex-end;
+	-ms-justify-content: flex-end;}
+.flex_jcontent-around{
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	-ms-justify-content: space-around;}
+.flex_jcontent_cente{
+	justify-content:center;
+	-webkit-justify-content:center;
+	-ms-justify-content:center;}
+
+
+.flex_auto{flex:auto;
+	-webkit-flex:auto;
+	-ms-flex:auto}
+
+
+.flex_aitem-start{
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	-ms-align-items: flex-start;}
+.flex_aitem-end{
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+	-ms-align-items: flex-end;}
+.flex_aitem-center{
+	align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;}
+.flex_aitem-stretch{
+	align-items: stretch;
+	-webkit-align-items: stretch;
+	-ms-align-items: stretch;}
+.flex_aitem-baseline{
+	align-items: baseline;
+	-webkit-align-items: baseline;
+	-ms-align-items: baseline;}
+
+
+.flex_acontent-start{
+	align-content: flex-start;
+	-webkit-align-content: flex-start;
+	-ms-align-content: flex-start;}
+.flex_acontent-end{
+	align-content: flex-end;
+	-webkit-align-content: flex-end;
+	-ms-align-content: flex-end;}
+.flex_acontent-center{
+	align-content: center;
+	-webkit-align-content: center;
+	-ms-align-content: center;}
+.flex_acontent-stretch{
+	align-content: stretch;
+	-webkit-align-content: stretch;
+	-ms-align-content: stretch;}
+.flex_acontent-between{
+	align-content: space-between;
+	-webkit-align-content: space-between;
+	-ms-align-content: space-between;}
+.flex_acontent-around{
+	align-content: space-around;
+	-webkit-align-content: space-around;
+	-ms-align-content: space-around;}
+
+
+/*//////////////////////////ОСНОВНЫЕ СТИЛИ////////////////////////////////*/
+body{background-color: #070C15;
+	color: #FFFFFF;
+	font-family: 'Noto Sans', sans-serif;/*Стиль текста*/
+	font-size: 1vw;
+	line-height: 1.41vw;/*Растояние между строками*/
+	margin: 0 auto;}
+.white{
+	background-color: #f2f3f4;
+	color: #000000;}
+.grey{
+	padding:2vw;
+	background-color: #1c1c1c;
+}
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:active{
+	font-weight: bold;
+}
+ol, ul, li {
+    list-style: none;
+}
+.text_center{
+	text-align: center;
+}
+.basic_indents{
+	height: auto;
+	width: 70vw;
+	margin-left: auto;
+    margin-right: auto;
+}
+.main_headings_text{ /*текст главных заголовков*/
+	font-weight: bold;
+	font-size: 5vw;
+	text-align: center;
+	margin-top: 4vw;
+	margin-bottom: 2vw;	
+}
+.subtitle_text/*текст подзаголовка*/{
+	font-weight: bold;
+	font-size: 3vw;
+}
+
+/*---------------------СТРОКА ИСТОРИИ---------------*/
+.HistoryLine a{
+	color: #000000;
+}
+.HistoryLine li{
+	display: inline; /* Отображать как строчный элемент */
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+}
+.HistoryLine{
+	padding-left: 15vw;
+	padding-right: 15vw;
+	font-size: 1vw;
+}
+.Homeimg{
+	width: 2.5vw;
+	height: 2.5vw;
+}
+.Arrowimg{
+	width: 1.5vw;
+	height: 1.5vw;
+}
+/*--------------------СЛАЙДЕР ОСНОВА---------------------------*/
+
+#slides article, #slides1 article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image, #slides1 .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+.overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+}
+label{ /*при наведении на  переключатели - курсор изменится*/
+	cursor: pointer;
+}
+.all input{ /*скрывает стандартные инпуты  на странице*/
+	display: none;
+}
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image, #switch1:checked ~ #slides1 .image, 
+#switch6:checked ~ #slides .image, 
+#switch11:checked ~ #slides .image,
+#switch16:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image, #switch2:checked ~ #slides1 .image, 
+#switch7:checked ~ #slides .image,
+#switch12:checked ~ #slides .image, 
+#switch17:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image, #switch3:checked ~ #slides1 .image, 
+#switch8:checked ~ #slides .image, 
+#switch13:checked ~ #slides .image, 
+#switch18:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image, #switch4:checked ~ #slides1 .image,
+#switch9:checked ~ #slides .image, 
+#switch14:checked ~ #slides .image,
+#switch19:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image, #switch5:checked ~ #slides1 .image,
+#switch10:checked ~ #slides .image, 
+#switch15:checked ~ #slides .image, 
+#switch20:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+.active{ 
+	text-align: center;
+}
+.active label{ /*стиль отдельного переключателя*/
+	display: inline-block;/*расположение в строку*/
+	width: 1.5vw;
+	height: 0.5vw;
+	border-radius: 0.2vw;
+	transition: all 0.4s ease;
+	
+	background: #bbb;
+}
+.active label:hover{ 
+	background: #514b4b;
+}
+/*цвет активного переключателя при активации чекбокса*/
+#switch1:checked ~ .active label:nth-child(1),
+#switch2:checked ~ .active label:nth-child(2),
+#switch3:checked ~ .active label:nth-child(3),
+#switch4:checked ~ .active label:nth-child(4),
+#switch5:checked ~ .active label:nth-child(5),
+#switch6:checked ~ .active label:nth-child(1),
+#switch7:checked ~ .active label:nth-child(2),
+#switch8:checked ~ .active label:nth-child(3),
+#switch9:checked ~ .active label:nth-child(4),
+#switch10:checked ~ .active label:nth-child(5),
+#switch11:checked ~ .active label:nth-child(1),
+#switch12:checked ~ .active label:nth-child(2),
+#switch13:checked ~ .active label:nth-child(3),
+#switch14:checked ~ .active label:nth-child(4),
+#switch15:checked ~ .active label:nth-child(5),{
+	background: #FFF;
+
+}
+
+#slides .image, #slides1 .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+/******************************ФОРМА***************************************/
+
+
+.formainsade{
+width: 25vw;
+}
+
+.forma {
+	margin: 2vw;
+	width: 30vw;
+}
+
+.formainsade,
+.forma {
+  padding: 0 16px;
+}
+
+.container {
+	width: 30vw;
+  	background-color: #f2f2f2;
+ 	padding:0.5vw 1.2vw 0.5vw 1.2vw;
+ 	border: 1px solid lightgrey;
+ 	border-radius: 3px;
+}
+
+.formainsade input[type=text] {
+  width: 23.5vw;
+  margin-bottom: 1.5vw;
+  padding: 0.7vw;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 0.6vw;
+  display: block;
+}
+
+.btn {
+  background: linear-gradient(to right, #080847,#382679,#941ac1, #e092fd);
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+/****************************FON**************************/
+.baner {
+	margin-top: 4vw;
+	background-image: url(img/HOME/baner1.png);  
+	background-size: 100vw 35vw;      
+}
+.fonCompane{
+	height: 30vw;
+	background-image: url('img/fon1Compani3.png');
+	background-size: 100vw 30vw; 
+	background-repeat: no-repeat;
+}
+.BackFonProdHead{
+	height: 10vw;
+	background-image: url('img/PRODUCT/Fon/FonProd3.png');
+	background-size: 100vw 10vw; 
+	background-repeat: no-repeat;
+}
+	.BackFonProdHeadMaf{
+		height: 10vw;
+		background-image: url('img/PRODUCT/Fon/FonProdMaf.png');
+		background-size: 100vw 10vw; 
+		background-repeat: no-repeat;
+	}
+.BackFonHowToOrder{
+	background-image: url('img/FON/HOW_TO_ORDER.png')
+}
+/*//////////////////////////ШАПКА/////////////////////////////////////*/
+.logo img{
+	width: 4vw;
+	height: 3.35vw;
+	margin: 0.9vw 0.9vw 0.9vw 3.8vw;
+}
+.textlogo{
+	width: 6vw;
+	font-size: 1.5vw;
+	font-weight:bold;
+}
+.menu_nav a,.menu_nav li{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.menu_nav a{
+	padding: 0 3vw;
+}
+.menu_nav a:hover, .FooterMenuWidth a:hover{
+	font-weight:bold;
+ 	font-size: 1vw;
+}
+.location{
+	font-size: 0.9vmax;
+	padding-right:3.8vw;
+}
+#Pull{
+	display: none;
+}
+/*//////////////////////////ОСНОВНАЯ СТРАНИЦА////////////////////////////*/
+/*Банер*/
+.baner_text1{
+	padding: 1vw 0 4vw 18.58vw;
+	font-size: 2vw;}
+.baner_text2{
+	padding: 0vw 0 4vw 25.58vw;
+	font-size: 2.5vw;
+	font-weight: bold;}
+.baner_text3{
+	padding-left: 40vw;
+	font-size: 2vw;}
+.button{padding-top: 10vw;}
+.order img,.connection img{padding-left: 0.5vw;}
+.order, .connection{
+	background: linear-gradient(to right, #1228B9, #2E75F1);
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;}
+.order:hover{font-weight:bold;}
+.connection:hover{font-weight:bold;}
+div.btn1, div.btn2{
+	width: 10vw;
+ 	border-radius: 0.33vw;
+ 	padding:0.66vw 1.32vw;
+ 	overflow: hidden;
+ 	cursor: pointer;
+ 	margin-bottom: 9vw;}
+ div.btn1{margin-left: 36vw;}
+ div.btn2{margin-right: 35vw;}
+
+
+/*Преимущества*/
+.TextPAd{
+	padding-top:3vw;
+	padding-bottom: 2vw;
+	text-align: center;
+}
+.SectionPremHome{
+	width: 40vw;
+	height: 6vw;
+	margin: auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+}
+.adimg{
+	padding-right: 0.8vw;
+
+	height: 5vw; 
+	width: 5vw;}
+.adimg1{
+	padding-right: 0.3vw;
+
+	height: 7.5vw; 
+	width: 5.5vw;}
+
+.textp{
+	padding-bottom: 2vw;
+	font-size: 1.2vw;
+	text-align: center;
+	font-weight:bold;}
+
+
+.pr ul{
+	padding-inline-start: 0vw;
+}
+.pr {
+	width:24.74vw ;
+	height:22.98vw;
+	padding: 3.42vw 3.42vw 3vw 3.42vw;
+	padding-bottom: ;}
+.products img, .company img, .foto img{padding-top: 0.4vw;}
+.namberprod{
+	width: 1.25vw;
+	height:0.85vw;}
+
+.Rectangle1, .Rectangle3{
+	width:36.32vw;
+	margin-bottom: 1vw;
+	height:0.6vw ;
+}
+.Rectangle2, .Rectangle4{
+	width:55.32vw;
+	height:0.6vw ;
+}
+.line{
+	padding-bottom: 0.3vw;
+	width:1.8vw ;
+	height:0.1vw;}
+.products a{color: #FFFFFF;}
+.Pprod {
+	font-weight: bold;
+	font-size: 1.25vw;}
+.infoprod{
+	margin-top: 0.6vw;
+	margin-bottom: 0.6vw;
+	color: #8D8D8D;
+	font-size: 0.8vw;}
+.products li {margin-top: 0.5vw;}
+
+/**/
+
+.company {
+	background: url(img/compane.png) right bottom no-repeat;
+	
+	background-size: 41vw 39vw;
+    background-color: #FAF7FE;
+    color: #000000;
+}
+.imgcompane{
+	width: 33vw;
+	height: 29vw;
+	padding-left: 2vw;
+	padding-right: 3vw;
+}
+.textcopm{
+	padding: 3.42vw 40vw 3vw 5vw;
+
+	}
+p{
+	text-indent: 3.5vw;
+}
+.partners{
+	width: 100vw;
+	height: auto;
+}
+/*//////////////////////////СТРАНИЦА О ПРОИЗВОДСТВЕ//////////////////////*/
+
+.TextsubtitleCompane{
+	margin-top: 0vw;
+	margin-left: 30vw;
+	margin-right: 20vw;
+	margin-bottom: 1vw;
+	width: 65vw;
+	height: auto;
+	text-align: right;
+	line-height:5vw;
+}
+.TextsubtitleCompane2{
+	margin-left: 55vw;
+	margin-right: 20vw;
+	width: 40vw;
+	height: auto;
+	line-height:2.5vw;
+	font-size: 1.2vw;
+}
+.TextComp{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+}
+/*//////////////////////////ПРОДУКЦИЯ///////////////////////////////////*/
+
+.BackFonProd{
+	width: 100vw
+	height:auto;
+	background-image: url('img/PRODUCT/Fon/FonProdOsn.png');
+	background-size: 100vw auto; 
+}
+.BackFonProd2{
+	width: 100vw
+	height:auto;
+	background-image: url('img/PRODUCT/Fon/FonProdOsn2.png');
+	background-position: center;
+	background-size: 100vw 85%; 
+	background-repeat: no-repeat;
+}
+/*-------------------ОСОБЕННОСТИ СЛАЙДЕРА-----------*/
+#slides{
+float:left;
+width: 25vw;
+height: 17vw;
+margin-top: 4vw;
+}
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width:25vw; /*максимальнная длинна*/
+}
+/*---------------------ВЛОЖЕННЫЙ БЛОК-------------------------*/
+.TextProdHeading{/*Параметрі вложенного текста-пояснения*/
+	text-align: center;
+	width: 40vw;
+   	margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+}
+.summary{
+	padding: 2vw;
+	background-color: #070C15;
+	color: #FFF;
+}
+
+/*--------------------ЯЧЕЙКИ ПРОДУКЦИИ--------------*/
+.NameProdTov{
+	display: block;
+	width: 20vw;
+	height: 1.5vw;
+  	text-align:center;
+ 	padding: 0.2vw;
+  	color: #fff;
+    font-weight: bold;
+    border-top: 0.2vw solid #fff;
+    border-bottom: 0.2vw solid #fff;
+ 	overflow: hidden;/*скрытие*/
+ 	text-overflow: ellipsis;/*...*/
+ 	white-space: nowrap;
+ }
+.NameProdTov:hover{
+	height: auto;
+ 	background-color: #fff;
+  	color: #000;
+  	white-space: normal;
+  	overflow: visible;
+  	font-size: 1vw;
+ }
+.GrayBacking {
+    width: 20vw;
+	height: 15vw;
+    overflow:hidden;
+    background-color: rgba(128,128,128, 0.5);   
+}
+.zoomprm{
+	margin: 2vw auto 2vw auto;
+	width: 20vw;
+	height: 15vw;
+	transition: 1s;
+	
+}
+.zoomprm:hover{
+	transform: scale(1.25);
+}
+.ImgZoom_block {
+	margin: 2vw auto 2vw auto;
+	width: 20vw;
+	height: 15vw;
+    background: url('img/PRODUCT/Maf/4.jpg') center center;
+    background-size: 15vw 10vw;
+    background-repeat: no-repeat;
+    transition: background-size .3s ease-in;
+}
+.ImgZoom_block:hover {background-size: 110% 110%}
+/*---------------------------------------------------------------------*/
+.Leftsubtitle_textsummary{
+	display: block;
+  	text-align:right;
+} 
+/*******************************1*******************************************/
+/*****СЛАЙДЕР****/
+.r{
+	padding: 0.5vw;
+	
+	height:26.2vw;
+	background-color: #000;
+}
+#slides1{
+	float:left;
+	width: 35vw;
+	height: 24.5vw;
+}
+#desktop:checked ~ #slider1{ /*размер всего слайдера*/
+	max-width:35vw; /*максимальнная длинна*/
+}
+/**************************************************************************/
+.TovProdSection{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	text-align: center;	
+}
+.ProdNumberPrem{
+	width: 7vw;
+    height: 7vw;
+}
+.SectionPrem{
+	width: 40vw;
+	height: auto;
+	margin: 1vw auto;
+}
+.SectionPrem:hover, .TranformText:hover, .SectionPremHome:hover{
+	font-weight: bold;
+	transform: scale(1.1);
+}
+.subtitle_text1{/*подзпголовки секций*/
+	line-height: 3vw;
+	width: 98vw;
+	height: auto;
+	font-weight: bold;
+	font-size: 3vw;
+}
+/**********Первая секция******/
+.ProdTexTov{
+	width: 40vw;
+	height: auto;	
+	margin-left: 3vw;
+}
+.TextDescriptionsTov1{
+	width: 75vw;
+	height: auto;
+	margin: auto;
+}
+
+.FonTex{/*фон для технологий*/
+	background-image: url('img/PRODUCT/Fon/FonProdTex1.png');
+	background-size: 100vw auto;
+}
+/*//////////////////////////ПРОЕКТЫ////////////////////////////////////*/
+.subtitle_textProect{
+	font-size: 2vw;
+	line-height: 3vw;
+	font-weight: bold;
+}
+.PojLogo{
+	width: 30vw;
+	height: auto;
+}
+.ProjText{
+	margin: auto;
+	width: 35vw;
+	font-size: 1.5vw;
+	text-align: center;
+}
+.ProjText1{
+	margin-top: 1vw;
+	font-size: 1.5vw;
+	text-align: center;
+}
+/*------------------ЗАЯВКА------------------------*/
+/* Кнопка, используемая для открытия контактной формы - фиксируется в нижней части страницы */
+
+.open-button {
+ 	background: linear-gradient(to right, #071527, #0d324e, #3f8caa, #ffffff);
+  	color: white;
+  	padding: 1vw;
+  	border: none;
+  	cursor: pointer;
+  	opacity: 0.8;
+  	position: fixed;
+  	bottom: 1vw;
+  	right: 1vw;
+  	width: 18vw;
+  	border-radius: 3vw;
+}
+
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+  	display: none;
+  	position: fixed;
+  	bottom: 0;
+  	right: 15px;
+  	z-index: 9;
+  	color: black;
+}
+/*стили для контейнера формы */
+.form-container {
+  	width:45vw;
+  	padding: 1.5vw;
+  	background-color: #becfde;
+}
+
+/* Поля ввода */
+.SpisPR, .form-c1 input[type=text], .form-container3 input[type=text]{
+  	width: 15vw;
+  	padding: 0.7vw;
+ 	margin: 0.9vw 0 1vw 0;
+  	border: none;
+  	background: #f1f1f1;
+}
+.EntryField{
+	width: 45vw;
+	height: 10vw;
+	padding: 0.7vw;
+  	margin: 0.1vw 0 1.5vw 0;
+  	border: none;
+  	background: #f1f1f1;
+}
+
+.form-c1 label{
+	width: 5vw;
+	text-align: center;
+	margin: 0 2vw 0 2vw;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=text]:focus, .EntryField:focus, .form-container3 input[type=text]:focus,{
+  	background-color: #ddd;
+  	outline: none;
+
+}
+
+/* Установите стиль для кнопки отправить/войти */
+.form-container .btn4, .form-container3 .btn4 {
+  background-color: #6395a7;
+  color: white;
+  padding: 1vw;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:0.5vw;
+  opacity: 0.8;
+}
+
+/*цвет фона для кнопки "Отмена" */
+.form-container .cancel {
+  background-color: #0c1826;
+}
+
+/* Добавить некоторые эффекты наведения на кнопки */
+.form-container .btn4:hover, .open-button:hover, .form-container3 .btn4:hover {
+  opacity: 1;
+}
+/*------------------ЗВОНОК-------------------------*/
+.imgCall{
+	width: 3vw;
+	height: 3vw;
+}
+.open-button2 {
+  	opacity: 0.8;
+  	padding: 0;
+  	bottom: 5vw;
+  	width: 5vw;
+  	height: 5vw;
+  	border-radius: 3vw;
+}
+.form-container2 {
+  	width:25vw;
+}
+.form-container2 input[type=text]{
+  	width: 20vw;
+  	padding: 0.7vw;
+ 	margin: 0.9vw 0 1vw 0;
+  	border: none;
+  	background: #f1f1f1;
+}
+/*/////////////////////////КАК ЗАКАЗАТЬ/////////////////////////////////*/
+.OrderСompositions{
+	height: 10vw;
+	margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9vw;
+    overflow: hidden;
+}
+.OrderСomp2_7{
+	width: 33vw;
+}
+.OrderСomp1_3{
+	width: 27vw;
+}
+.OrderСomp4_5{
+	width: 40vw;
+}
+.OrderСomp6{
+	width: 65vw;
+}
+.OrderСompositions:hover{
+	font-weight: bold;
+	transform: scale(1.1);
+}
+.ImgOrderComp{
+	width:8vw;
+	height:8vw;
+}
+/*/////////////////////////КОНТАКЫ/////////////////////////////////////*/
+.TextContact{
+	width: 40vw;
+	height: auto;
+	margin: auto;
+	font-size: 1.3vw;
+}
+
+/*стили для контейнера формы */
+.form-container3 {
+	text-align: center;
+	margin: 4vw 2vw 3vw 5vw;
+  	width:40vw;
+  	height: 36vw;
+  	padding: 1.5vw;
+  	background-color: #becfde;
+}
+.form-container3 .btn4{
+	margin-top: 4vw;
+}
+/*//////////////////////////ПОДВАЛ///////////////////////////*/
+.FooterSectionWidth{
+	width: 26vw;
+}
+.FooterMenuWidth{
+	width: 20vw;
+}
+.FooterMenuWidth a{
+	display: block;
+	margin-left: 3vw;
+	margin-bottom: 3vw;
+	margin-top: 3vw;
+}
+footer{
+	padding: 2vw 3.8vw;
+}
+.txlogofooter{
+	width: 16vw;
+	text-align: left;
+	margin-top: 1vw;
+}
+
+.logofooter{
+	width: 6vw;
+	height: 5vw;
+	margin-right: 1vw;
+}
+.TexttitleFooter{
+ 	font-size: 1.7vw;
+	font-weight:bold;
+}
+.TexttitleFooter2{
+	margin-bottom: 3.5vw;
+}
+.socialnetwork{
+	width: 1.5vw;
+	height:1.5vw;
+	margin: 1vw;
+}
+.mape{
+	width: 13vw;
+	height: 13vw;
+}
+
+
+
+
+
+@media screen and (max-width: 660px){
+	.none{
+ 		display: none;
+ 	}
+	.main_flex_nowrap{	
+		-webkit-flex-flow:column;
+		flex-flow:row column}
+	
+
+	.row{
+		display:flex;
+		display:-webkit-flex;
+		-webkit-flex-flow:row nowrap;
+		flex-flow:row nowrap;
+	}
+	.rowr{
+		display:flex;
+		display:-webkit-flex;
+		-webkit-flex-flow:wrap;
+		flex-flow:wrap;
+	}
+	body {
+		font-size: 1.8vw;
+		line-height: 2vw;
+	}
+	.white{
+		padding: 4vw;
+	}
+	.subtitle_text{
+		font-size: 4vw;
+		line-height: 4vw;
+	}
+
+	/*ГЛАВНАЯ*/
+	.baner {
+		height:50vw;
+		margin-top: 4vw;
+		background-image: url(img/FON/baner2.png);  
+		background-size: 100vw auto;      
+	}
+	.baner_text1, .baner_text2,.baner_text3{
+		text-align: center;
+		line-height: 4vw;
+		padding: 1vw 0 1vw 30vw;
+	}
+	.baner_text1, .baner_text3{
+		font-size: 4vw;}
+	.baner_text2{
+		font-size: 4.5vw;}
+	.button{
+		padding-top: 4vw;
+	}	
+	div.btn1, div.btn2{
+		width: 20vw;
+ 		border-radius: 0.33vw;
+ 		padding:1.5vw 2vw;
+ 		overflow: hidden;
+ 		cursor: pointer;
+ 		margin:0 6vw 4vw 66vw;
+ 	}
+
+ 	.textp{
+ 		font-size: 2vw;
+ 		line-height: 2vw;
+ 	}
+ 	.pr ul li{
+ 		margin-top: 1.5vw;
+ 		line-height: 2vw;
+ 	}
+ 	.pr{
+ 		margin-top: 4vw;
+ 		width: 50vw;
+ 		text-align: center;
+ 	}
+ 	.Pprod{
+ 		font-size: 2.5vw;
+ 	}
+ 	.infoprod{
+ 		font-size: 1.5vw;
+ 		margin-top: 1.5vw;
+ 		margin-bottom: 1.5vw;
+ 	}
+ 	.products{
+ 		height: 160vw;
+ 	}
+
+ 	.textcopm {
+ 		width: 70vw;
+    	padding: 4vw 2vw;
+    	text-align: center;
+    	margin: auto;
+	}
+	/*О КОМПАНИИ*/
+	.fonCompane{
+		height: 40vw;
+		background-position: bottom;
+}
+	.TextsubtitleCompane{
+		width: 75vw;
+		margin: 3vw auto;
+		text-align: right;
+		line-height:5vw;
+		font-size: 5vw;
+	}
+	.TextsubtitleCompane2{
+		margin-left: 50vw;
+		width: 40vw;
+		height: auto;
+		line-height:2.5vw;
+		font-size: 2vw;
+	}
+	.TextComp{
+		padding-top: 2vw;
+		padding-bottom: 2vw;
+	}
+	.zoomprm{
+		width: 35vw;
+		height: 30vw;}
+	/**/
+	/*.BackFonProd section .basic_indents{
+		width: 100vw;
+		margin: 0;
+	}*/
+	.NameProdTov{
+		display: block;
+		width: 66vw;
+		height:auto;
+		font-size: 5vw;
+ 		padding: 4vw 2vw;
+	}
+	.NameProdTov:hover{
+  		font-size: 3vw;
+  		line-height: 3vw;
+ 	}
+	.GrayBacking {
+    	width: 70vw;
+		height: 65vw;
+    	overflow:hidden;
+    	background-color: rgba(128,128,128, 0.5);   
+	}
+	.ImgZoom_block {
+		margin: 4vw 0vw;
+		width: 70vw;
+		height: 65vw;
+    	background: url('img/PRODUCT/Maf/4.jpg') center center;
+    	background-size: 55vw 45vw;
+    	background-repeat: no-repeat;
+    	transition: background-size .3s ease-in;
+	}
+	
+	/*КАК ЗАКАЗАТЬ*/
+	.OrderСomp1_3, .OrderСomp2_7, .OrderСomp4_5, .OrderСomp6, .SectionPremHome, .TranformText{
+		font-size: 1.8vw;
+		line-height: 2vw;
+		width: 70vw;
+		height: auto;
+		margin-top: 2vw;
+		margin-bottom: 2vw;
+	}
+	.OrderСomp6{
+		height: 20vw;
+	}
+	
+	/*************************************/
+	.form-container3 {
+  		width:100%;
+  		height: 65vw;
+  		padding: 1.5vw;
+  		background-color: #becfde;
+	}
+	.form-container3 input[type=text]{
+  		width: 45vw;
+  		padding: 2vw;
+ 		margin: 2vw 0 2vw 0;
+  		border: none;
+  		background: #f1f1f1;
+	}
+	.form-container3 .btn4{
+		margin-top: 4vw;
+	}
+	/*************************************/
+
+	.TextContact{
+		margin-left: 11vw;
+		text-align: left;
+		width: 50vw;
+		font-size: 2vw;
+		line-height: 2.5vw;
+	}
+
+ 	.HistoryLine{
+ 		width: auto;
+ 		font-size: 2vw;
+ 		margin:auto;
+ 		padding-top: 0.1vw;
+ 		padding-bottom: 0.1vw;
+ 	}
+ 	
+ 	/*Подвал*/
+ 	.logofooter{
+ 		width: 10vw;
+ 		height: 9vw;
+ 		margin-left: 8vw;
+ 		margin-bottom: 2vw;
+ 	}
+ 	.txlogofooter{
+ 		width: 45vw;
+ 		text-align: center;
+ 		margin: auto;
+ 		line-height: 3vw;
+ 	}
+ 	.TexttitleFooter{
+ 		font-size: 3vw;
+ 		line-height: 3vw;
+
+ 	}
+ 	.FooterSectionWidth{
+ 		width: 50vw;
+ 		text-align: center;
+
+ 	}
+ 	.FooterSectionWidth .row a{
+ 		margin: auto;
+ 	}  
+	/*Шапка*/
+	.menu_nav{
+		height: auto;
+		font-size: 2vw;
+		line-height: 4vw;
+	}
+	.menu_nav ul{
+		padding-left: 4vw;
+		width: 100%;
+		display: block;
+		height: auto;
+	}
+	.menu_nav ul li{
+		width: 30%;
+		height: auto;
+		float:left;
+		position:relative;
+	}
+	.menu_nav a{
+		padding: 2vw;
+		width: 100%;
+		text-indent: 2vw;	
+	}
+	.menu_nav a:hover, .FooterMenuWidth a:hover{
+		font-weight:bold;
+ 		font-size: 2.5vw;
+	}
+	.textlogo{
+		line-height: 6vw;
+		font-size: 6vw;
+		width: 30vw;
+		height: auto;
+	}
+	.location{
+		font-size: 2vw;
+		margin: 3vw 0 2vw 0;
+	}
+	.logo img{
+		margin-right: 4vw;
+		width: 25vw;
+		height:20vw;
+	}
+	.logo, .menu_nav{
+		display:flex;
+		display:-webkit-flex;
+		-webkit-flex-flow:row nowrap;
+		flex-flow:row nowrap
+	}
+	.logo{
+		width: 60vw;
+		height: 30vw;
+	}
+	ul{
+		padding-inline-start: 0px
+	}
+	
+	/*******************Prod****************/
+	.BackFonProd2 {
+      	width: 100vw height:auto;
+      	background-image: none;
+  	}
+    .BackFonProd2 {
+        width: 100vw height:auto;
+        background-image: none;
+    }
+    .TextProdHeading {
+        text-align: center;
+        width: auto;
+    }
+    #slides {
+         width: 65vw;
+        height: 43vw;
+        margin: 4vw 4vw;
+    }
+    .active label {
+        width: 3.5vw;
+        height: 1vw;
+        border-radius: 0.5vw;
+    }
+    .a2{
+     width: 20vw;
+     margin-left: 27vw;
+   }
+   .ProdTexTov, .SectionPrem{
+      width: 70vw;
+    }
+    .form-container{
+      width: 70vw;
+    }
+    .SelForm, .form-c1 input[type="text"],.EntryField{
+      width: 68vw;
+    }
+    .form-container2{
+      width: 40vw;
+    }
+    .form-container2 input[type="text"]{
+      width: 38.5vw;
+    }
+  .open-button{
+    width: 40vw;
+  }
+  .open-button2{
+    bottom: 8vw;
+    width: 7vw;
+    height: 7vw;
+    border-radius: 7vw;
+  }
+}
+}

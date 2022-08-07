@@ -1,0 +1,191 @@
+<! DOCTUPE html>
+<html lang= "en">
+<head>
+	<meta charset="utf-8">
+	<title>DRAVO HTML</title>
+	<link rel="stylesheet"  href="CSS.css">
+	<script src="JS.js"></script>
+</head>
+<body>
+	<header>
+		<div class="main_flex_nowrap flex_aitem-center flex_jcontent-between">
+			<div class="main_flex_nowrap flex_aitem-center logo">
+				<img src="img/foundation/logo.png">
+				<div class="textlogo">MODUL-BRAVO</div>
+			</div>
+			<nav class="menu_nav">
+				<ul class="main_flex_nowrap flex_aitem-center flex_jcontent-between">
+					<li><a href="HOME.html">ГЛАВНАЯ</a></li>
+					<li><a href="ABOUT_COMPANY.html">О КОМПАНИИ</a></li>
+					<li><a href="PRODUCT.html">ПРОДУКЦИЯ</a></li>
+					<li><a href="PROJECTS.html">ПРОЕКТЫ</a></li>
+					<li><a href="HOW_TO_ORDER.html">КАК ЗАКАЗАТЬ</a></li>
+					<li><a href="CONTACT.html">КОНТАКТЫ</a></li>
+				</ul>
+				<a href="#" id="Pull"> МЕНЮ</a>
+				
+			</nav>
+			<div class="location">
+				LOCATION:<span>RU</span>
+			</div>
+		</div>
+	</header>  
+
+	<div class="white HistoryLine">
+		<ul class="main_flex_nowrap flex_aitem-center row">
+			<li>
+				<div class="main_flex_nowrap row">
+					<a class="main_flex_nowrap flex_aitem-center  row" href="">
+						<img class="Homeimg" src="img/history _line/Home.png">
+						ГЛАВНАЯ
+						<img class="Arrowimg" src="img/history _line/Arrow.png">
+					</a>	
+				</div>
+			</li>
+			<li>
+				<a class="main_flex_nowrap flex_aitem-center " href="">КАК ЗАКАЗАТЬ
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="main_headings_text BackFonProdHead BackFonHowToOrder">КАК ЗАКАЗАТЬ</div>
+	
+	<section class="white" >
+
+		<div class="main_flex_nowrap flex_aitem-center flex_jcontent-between">
+			<div class="main_flex_nowrap flex_aitem-center OrderСompositions OrderСomp1_3 row" >
+				<img class="ImgOrderComp" src="img/foundation/roman_numeral1.png">
+				<div> Вы направляете нам заявку с Вашими пожеланиями (площадь, понравившийся дизайн).</div>
+			</div>
+
+			<div class="main_flex_nowrap flex_aitem-center OrderСompositions OrderСomp2_7 row" >
+				<img class="ImgOrderComp" src="img/foundation/roman_numeral2.png">
+				<div>Учитывая Ваши пожелания, мы формируем понятное и обширное коммерческое предложение, которое состоит из нескольких дизайн –проектов с разными вариантами комплектаций.</div>
+			</div>	
+
+			<div class="main_flex_nowrap flex_aitem-center OrderСompositions OrderСomp1_3 row" >
+				<img class="ImgOrderComp" src="img/foundation/roman_numeral3.png">
+				<div>Вы определяете наиболее подходящую модель и комплектацию,при необходимости вносите корректировки до полного согласования.</div>
+			</div>		
+		</div>
+		<div class="main_flex_nowrap flex_aitem-center flex_jcontent-between">
+			<div class="main_flex_nowrap flex_aitem-center OrderСompositions OrderСomp4_5 row">
+				<img class="ImgOrderComp" src="img/foundation/roman_numeral4.png">
+				<div>Далее мы выезжаем на замеры и фото фиксацию для 3d-визуализации будущего объекта на местности.</div>
+			</div>	
+
+			<div class="main_flex_nowrap flex_aitem-center OrderСompositions OrderСomp4_5 row">
+				<img class="ImgOrderComp" src="img/foundation/roman_numeral5.png">
+				<div>В течение дня предоставляем коммерческое предложение по подготовке площадки к установке готового объекта или сборке его на месте. При желании даем Вам рекомендации для подготовки площадки своими силами.</div>
+			</div>
+		</div>
+		<div class="main_flex_nowrap flex_aitem-center flex_jcontent-between OrderСompositions OrderСomp6 row">	
+			<img class="ImgOrderComp" src="img/foundation/roman_numeral6.png">
+			<div>Через день высылаем Вам заполненный договор и спецификацию, эскизный проект, счет, которые являются его неотъемлемой частью. Договор составлен из всех обязательных пунктов и в равной степени учитывает права обеих сторон. Спецификация и эскизный проект содержат: подробное техническое задание, перечень материалов и работ, план фундамента или другого основания, планы помещений и электрической схемы, 3d-модель и визуализация объекта со всех сторон. В счете указаны наименование, количество, единицы измерения и цена объекта.</div>	
+		</div>
+		<div class="main_flex_nowrap flex_aitem-center flex_jcontent-between OrderСompositions OrderСomp2_7 row" >
+			<img class="ImgOrderComp" src="img/foundation/roman_numeral7.png" >
+			<div>После подписания договора, Вы своевременно уплачиваете, а мы - качественно изготавливаем объект, и в установленные сроки подписываем акт приема-передачи работ по договору и передаем ключи.</div>
+		</div>
+
+		<button class=" open-button open-button2" onclick="openFormCall()"><img class="imgCall" src="img/PRODUCT/Fon/roman_numeral1.png"></button>
+		<div class="form-popup" id="myFormCall">
+			<form action="/action_page.php" class="form-container form-container2">
+				<div class="text_center">
+					<h1>ЗАКАЗАТЬ ЗВОНОК</h1>
+					<h3>Оставьте Ваш телефон и наш менеджер свяжется с Вами.</h3>
+				</div>
+				<label for="name"><b>Ф.И.О.</b></label>
+				<input type="text" placeholder="Загребельный Максим Викторович" name="name" required>
+
+				<label for="phone"><b>Телефон</b></label>
+				<input type="text" placeholder="0504899113" name="phone" required>
+
+				<button type="submit" class="btn4">ОТПРАВИТЬ</button>
+				<button type="submit" class="btn4 cancel" onclick="closeFormCall()">ЗАКРЫТЬ</button>
+			</form>
+		</div>
+	</section>
+	<button class="open-button" onclick="openForm()">ОСТАВИТЬ ЗАЯВКУ</button>
+		<div class="form-popup" id="myForm">
+			<form action="/action_page.php" class="form-container">
+				<div class="text_center">
+					<h1>ОСТАВИТЬ ЗАЯВКУ</h1>
+					<h3>Оставьте Ваши контактные данные и предпочтения, чтобы наш менеджер связался с Вами.</h3>
+				</div>
+				<div class="main_flex_nowrap flex_aitem-center form-c1"> 
+					<label for="name"><b>Ф.И.О.</b></label>
+					<input type="text" placeholder="Загребельный Максим Викторович" name="name" required>
+
+					<label for="phone"><b>Телефон</b></label>
+					<input type="text" placeholder="0504899113" name="phone" required>
+				</div>
+
+				<div class="main_flex_nowrap flex_aitem-center form-c1" >				<label for="email"><b>Почта</b></label>
+					<input type="text" placeholder="alinasurk@gmail.com" name="email" required>
+
+					<label for="product"><b>Тип продукции</b></label>
+					<input type="text" placeholder="Торговые киоски" name="product" required>
+				</div>
+
+				<label class="text_center" for="preferences"><b>Предпочтения</b></label>
+				<textarea class="EntryField" wrap="hard" placeholder="Выши пожелания и требования" name="preferences"></textarea>
+
+				<button type="submit" class="btn4">ОТПРАВИТЬ</button>
+				<button type="submit" class="btn4 cancel" onclick="closeForm()">ЗАКРЫТЬ</button>
+			</form>
+		</div>
+	<footer>
+		<div class="main_flex_nowrap flex_aitem-center">
+			<div class="FooterSectionWidth ">
+				<div class="main_flex_nowrap flex_aitem-center row">
+					<img class="logofooter" src="img/foundation/logo.png">
+					<div class="TexttitleFooter">MODUL-BRAVO</div>
+				</div>
+				<div class="txlogofooter">
+					ПРОИЗВОДИТЕЛЬ КАРКАСНЫХ И
+					МОДУЛЬНЫХ КОНСТРУКЦИЙ ДЛЯ
+					ВАШЕГО БИЗНЕСА
+				</div>
+				<div class="main_flex_nowrap row ">
+					<a href=""><img class="socialnetwork" src="img/footer/instagram.png"></a>
+					<a href=""><img class="socialnetwork" src="img/footer/facebook.png"></a>
+					<a href=""><img class="socialnetwork" src="img/footer/twitter.png"></a>
+				</div>
+			</div>
+			<div class="FooterMenuWidth none">
+				<a href="HOME.html">ГЛАВНАЯ</a>
+				<a href="PRODUCT.html">ПРОДУКЦИЯ</a>
+				<a href="HOW_TO_ORDER.html">КАК ЗАКАЗАТЬ</a>
+
+			</div>
+			<div class="FooterMenuWidth none"> 
+				<a href="ABOUT_COMPANY.html">О КОМПАНИИ</a>
+				<a href="PROJECTS.html">ПРОЕКТЫ</a>
+				<a href="CONTACT.html">КОНТАКТЫ</a>
+			</div>					
+
+			<div class="FooterSectionWidth flex_aitem-center flex_jcontent-between none">
+				<div class="TexttitleFooter TexttitleFooter2">КОНТАКЫ</div>
+				<div class="main_flex_nowrap">
+					<div>АДРЕС:&ensp;</div>
+					<div> г. Харьков, пр-т Московский,<br> д. 91А, офис 42</div>
+				</div>
+				<div  class="main_flex_nowrap">
+					<div>EMAIL:&ensp;</div>
+					<div> bravo-2010@ukr.com</div>
+				</div>
+				<div  class="main_flex_nowrap">
+					<div>PHONE:&ensp;</div>
+					<div> (057) 75-56-888</div>
+				</div>
+
+			</div>
+			<div class="none">
+				<a href="https://www.google.com.ua/maps/place/%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80%D0%BE%D1%81%D0%BF.,+89,+%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2,+%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+61000/@49.990794,36.2537512,17z/data=!3m1!4b1!4m5!3m4!1s0x4127a0938bb00715:0x9a80e94a196e63a6!8m2!3d49.990794!4d36.2559399?hl=ru" target="_blank"><img class="mape" src="img/footer/mape.png"></a>
+			</div>
+		</div>	
+	</footer>
+</body>
+</html>
